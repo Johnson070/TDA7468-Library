@@ -20,16 +20,6 @@
  * @section other_sec Others notes and compatibility warning
  * Compatible with arduino 1.0.x and >=0023\n
  * Retro-compatible with the previous library version
-
-
-struct dataTDA {
-  int8_t volume;
-  int8_t bass;
-  int8_t treble;
-  int8_t balance;
-  uint8_t gain;
-  bool mute = false;
-};
  */
 #pragma once
 
@@ -83,7 +73,7 @@ class TDA7468D {
 		/*
 			enable - 0 .. 1 off / on
 			gain - 0 .. 4 -> 0 .. 12 dB(0 6 9 12)   =default 0dB
-			mix - 0 .. 7 -> inv 0 .. 2 (100 50 25 %) | 0% | non inv 4 .. 6 (100 75 50) | 8 mute
+			mix - 0 .. 7 -> inv 0 .. 2 (100 50 25 %) | 0% | non inv 4 .. 6 (100 75 50) | 7 mute
 			buffGain - 0 .. 1 (0 6 dB)
 		*/
 		void setSurround(bool enable,uint8_t gain, uint8_t mix , bool buffGain);
