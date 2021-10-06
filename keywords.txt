@@ -1,0 +1,43 @@
+#######################################
+# Syntax Coloring Map For TDA7468D
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TDA7468D		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+reset	KEYWORD2
+setInput		KEYWORD2
+setMic		KEYWORD2
+turnMic		KEYWORD2
+setGain		KEYWORD2
+setSurround		KEYWORD2
+setVol_L		KEYWORD2
+setVol_R		KEYWORD2
+setBass		KEYWORD2
+setTreble		KEYWORD2
+mute		KEYWORD2
+setAlc		KEYWORD2
+detachInterrupt		KEYWORD2
+disableInterrupt		KEYWORD2
+enableInterrupt		KEYWORD2
+checkForInterrupt		KEYWORD2
+pullUp		KEYWORD2
+pullDown		KEYWORD2
+balance		KEYWORD2
+setAutoInc		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+IN1		LITERAL1
+IN2		LITERAL1
+IN3		LITERAL1
+IN4		LITERAL1
