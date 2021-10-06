@@ -28,10 +28,10 @@
 
 ## More
  1) `setAlc(bool enable, bool detector, bool circ, uint8_t attack, uint8_t threshold, bool attackMode);`
- 2) `void setSurround(bool enable,uint8_t gain, uint8_t mix , bool buffGain);`<br>
+ 2) `void setSurround(bool enable,uint8_t gain, uint8_t mix , bool buffGain);`<br><br>
     `gain` -> `0 .. 4` - `0 .. 12 dB` (0 6 9 12 dB)<br>
     `mix` -> `0 .. 2` - inv mix(100 50 25%) | `3` - 0% | `4 .. 6` mix(100 75 50) | `7` - mute<br>
     `buffGain` -> `0 .. 1` - `0 or 6 dB`
- 4) `setMic(uint8_t micVol);`<br>
+ 3) `setMic(uint8_t micVol);`<br><br>
     `micVol` -> `0 .. 4` - `0 .. 14 dB` (0 6 10 14 dB) mic GAIN
- 5) `turnMic(bool enable);`
+ 4) `turnMic(bool enable);`
