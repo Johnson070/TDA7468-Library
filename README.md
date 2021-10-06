@@ -1,5 +1,6 @@
 # TDA7468D
- Library for TDA7468D I2C control!
+ Library for TDA7468D I2C control!<br>
+ [Datasheet TDA7468D](https://pdf1.alldatasheet.com/datasheet-pdf/view/92058/STMICROELECTRONICS/TDA7468D13TR.html)
 
 ## Start
  1) Create object ```TDA7468D tda;```
