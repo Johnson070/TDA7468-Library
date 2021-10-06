@@ -26,8 +26,6 @@
 #include <Wire.h>		// обычная Wire
 #include <Arduino.h>
 
-
-//////undifine for debug
 //#define DEBUG_TDA
 
 #define TDA7468_addr 0x88

@@ -65,10 +65,10 @@ void TDA7468D::setSurround(bool enable,uint8_t gain, uint8_t mix, bool buffGain)
 
 void TDA7468D::setVol_L(uint8_t vol) {
 	if (vol > 87) return;
-	vol *= constrain(100 - _balance,0,100);
-	Serial.println(vol);
+	vol += (_balance > 0) ? constrain(map(_balance,0,100,0,87-vol),0,87-vol) : 0;
+	//Serial.println(vol);
 	if (vol > 63) {
-		vol = (((vol-56)/8)<<6) | 0b111000 | (~vol & 0b00000111);
+		vol = (((vol-56)/8)<<6) | 0b111000 | (vol & 0b00000111);
 	}
 	
 	sendData(TDA7468_VOLUME_LEFT,vol);
@@ -76,7 +76,7 @@ void TDA7468D::setVol_L(uint8_t vol) {
 
 void TDA7468D::setVol_R(uint8_t vol) {
 	if (vol > 87) return;
-	vol *= constrain(100 + _balance,0,100);
+	vol += (_balance < 0) ? constrain(map(_balance,-100,0,87-vol,0),87-vol,0) : 0;
 	if (vol > 63) {
 		vol = (((vol-56)/8)<<6) | 0b111000 | (vol & 0b00000111);
 	}
