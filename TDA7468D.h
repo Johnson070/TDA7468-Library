@@ -132,7 +132,7 @@ class TDA7468D {
 		uint8_t _treble = 0b111; // 0 dB
 		uint8_t _bass = 0b111; // 0 dB
 
-		int8_t	_balance = 0;
+		int16_t	_balance = 0;
 
 		void sendData(uint8_t sub_addr, uint8_t data);
 };

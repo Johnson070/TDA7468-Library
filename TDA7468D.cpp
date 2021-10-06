@@ -76,7 +76,10 @@ void TDA7468D::setVol_L(uint8_t vol) {
 
 void TDA7468D::setVol_R(uint8_t vol) {
 	if (vol > 87) return;
-	vol += (_balance < 0) ? constrain(map(_balance,-100,0,87-vol,0),87-vol,0) : 0;
+	
+	if (_balance < 0) {
+		vol += constrain(map(0b10000000 - (_balance & 0b01111111),0,100,0,87-vol),0,87-vol);
+	}
 	if (vol > 63) {
 		vol = (((vol-56)/8)<<6) | 0b111000 | (vol & 0b00000111);
 	}
